@@ -14,7 +14,7 @@ function setup() {
 
   createCanvas(1920, 1080);
 
-  angle = PI / 2;
+  angle = PI / 4;
   w = 0;
 
 }
@@ -26,24 +26,22 @@ function draw() {
   background(220);
   translate(width / 2, 50);
 
-
-
   k1a = w;
   k1w = g / r * sin(angle);
   a_2K_1A = angle + k1a * dt / 2;
-  w_2K_1W = k1a + k1w * dt / 2;
+  w_2K_1W = w + k1w * dt / 2;
   e_2K_1a = g / r * sin(a_2K_1A);
 
   k2a = w + k1w * dt / 2;
   k2w = g / r * sin(a_2K_1A);
-  a_2K_2A = a_2K_1A + k2w * dt / 2;
-  w_2K_2W = k2a + k2w * dt / 2;
+  a_2K_2A = angle + k2w * dt / 2;
+  w_2K_2W = w + k2w * dt / 2;
   e_2K_2a = g / r * sin(a_2K_2A);
 
   k3a = k2a + k2w * dt / 2;
   k3w = g / r * sin(a_2K_2A);
-  a_2K_3A = a_2K_2A + k3a * dt / 2;
-  w_2K_3W = k3a + k3w * dt / 2;
+  a_2K_3A = angle + k3a * dt / 2;
+  w_2K_3W = w + k3w * dt / 2;
   e_2K_3a = g / r * sin(a_2K_3A);
 
   k4a = k3a + k3w * dt;
