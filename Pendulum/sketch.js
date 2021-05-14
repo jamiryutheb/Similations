@@ -16,7 +16,7 @@ function setup() {
 
   angle = PI / 4;
   w = 0;
-
+  print("Hello");
 }
 
 function draw() {
